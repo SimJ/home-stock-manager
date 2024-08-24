@@ -1,0 +1,132 @@
+.table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-header {
+    display: table-row;
+    background-color: #f4f4f4; /* 薄いグレーの背景色 */
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    vertical-align: middle; /* 中央揃え */
+}
+
+/* 各列の幅を揃えるためにwidthを明確に指定 */
+.table-cell.id-cell {
+    width: 10%;
+}
+
+.table-cell.name-cell {
+    width: 25%;
+}
+
+.table-cell.threshold-cell {
+    width: 15%;
+}
+
+.table-cell.consume-cell {
+    width: 15%;
+}
+
+.table-cell.quantity-cell {
+    width: 15%;
+}
+
+.table-cell.purchase-cell {
+    width: 10%;
+}
+
+.table-cell.edit-cell {
+    width: 10%;
+}
+
+/* ボタンのスタイル */
+.action-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.action-button:active {
+    transform: scale(0.95); /* クリックしたときのアクション */
+}
+
+.add-item-form, 
+.edit-item-form {
+    margin-bottom: 16px;
+}
+
+.add-item-form input, 
+.edit-item-form input {
+    padding: 8px;
+    margin-right: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-item-form button, 
+.edit-item-form button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.add-item-form button:hover, 
+.edit-item-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .table-cell {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .add-item-form input, 
+    .edit-item-form input {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+
+    .add-item-form button, 
+    .edit-item-form button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+}
+
+.error-border {
+    border: 2px solid red; /* 枠を太くして目立たせる */
+}
+  
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px; /* エラーメッセージと入力欄の間隔を少し広げる */
+}
+
+.http-error-message {
+    color: red;
+    font-size: 1em;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid red;
+    background-color: #fdd;
+}
